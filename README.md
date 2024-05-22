@@ -1,6 +1,12 @@
-# revisaoapi
+# cp3 de java
 
-Projeto de revisão de API para os alunos do 2TDSPM da FIAP
+Projeto para o checkpoint 3 de java advanced com base no projeto revisao de api passado em aula.
+
+## Integrantes
+Leonardo Cordeiro Scotti-RM550769
+Eduardo de Toledo Violante- RM550364
+Gabriel de Andrade Baltazar- RM550870
+
 ## Tecnologias
 
  - [Java 17](https://docs.oracle.com/en/java/javase/17/)
@@ -94,3 +100,87 @@ Body:
 | Parâmetro | Tipo   | Descrição                                     |
 |:----------|:-------|:----------------------------------------------|
 | `id`      | `Long` | **Obrigatório**. Id do cliente a ser excluído |
+
+## Documentação da api-roupas
+
+#### Obter todas as roupas (findAll roupaDTO)
+
+```http
+  GET /roupas
+```
+
+#### Obter roupa por id (findById roupaDTO)
+
+```http
+  GET /roupas/${id}
+```
+
+| Parâmetro | Tipo   | Descrição                                    |
+|:----------|:-------|:---------------------------------------------|
+| `id`      | `Long` | **Obrigatório**. Id da roupa a ser buscada |
+
+#### Gravar roupa (save)
+
+```http
+  POST /roupa
+```
+
+Body:
+
+```json
+{
+    "tipo": "camiseta",
+    "tamanho": "g",
+    "cor": "preta",
+    "marca": "polo",
+    "preco": "40"
+}
+```
+
+| Parâmetro | Tipo     | Descrição                       |
+|:----------|:---------|:--------------------------------|
+| `tipo`    | `String` | Tipo da roupa a ser gravada   |
+| `tamanho`   | `String` | tamanho da roupa a ser gravada |
+| `cor`   | `String` | cor da roupa a ser gravada  |
+| `marca`   | `String` | marca da roupa a ser gravada |
+| `preco`   | `double` | preço da roupa a ser gravada  |
+
+#### Atualizar roupa (update)
+
+```http
+  PUT /roupas/${id}
+```
+
+| Parâmetro | Tipo   | Descrição                                       |
+|:----------|:-------|:------------------------------------------------|
+| `id`      | `Long` | **Obrigatório**. Id da roupa a ser atualizada |
+
+Body:
+
+```json
+{
+   "tipo": "camiseta",
+    "tamanho": "g",
+    "cor": "preta",
+    "marca": "polo",
+    "preco": "40"
+}
+```
+
+| Parâmetro | Tipo     | Descrição                          |
+|:----------|:---------|:-----------------------------------|
+| `tipo`    | `String` | Tipo da roupa a ser gravada   |
+| `tamanho`   | `String` | tamanho da roupa a ser gravada |
+| `cor`   | `String` | cor da roupa a ser gravada  |
+| `marca`   | `String` | marca da roupa a ser gravada |
+| `preco`   | `double` | preço da roupa a ser gravada  |
+
+#### Excluir roupa (delete)
+
+```http
+  DELETE /roupas/${id}
+```
+
+| Parâmetro | Tipo   | Descrição                                     |
+|:----------|:-------|:----------------------------------------------|
+| `id`      | `Long` | **Obrigatório**. Id da roupa a ser excluída |
