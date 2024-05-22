@@ -1,7 +1,6 @@
 package br.com.fiap.revisaoapi.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Tamanho;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.Min;
@@ -30,7 +29,7 @@ public class Roupa {
     @Column(name ="marca")
     private String marca;
 
-    @Min(message= "o preço deve ter no mínimo 2 caracteres")
+    @Min(value = 2, message= "o preço deve ter no mínimo 2 caracteres")
     @Column(name ="preco")
     private double preco;
 
@@ -85,11 +84,11 @@ public class Roupa {
         this.marca = marca;
     }
 
-    public String getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 }
