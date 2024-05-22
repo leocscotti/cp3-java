@@ -2,7 +2,7 @@ package br.com.fiap.revisaoapi.dto;
 
 import org.springframework.hateoas.RepresentationModel;
 
-public class RoupaDTO extends RepresentationModel<RoupaDTO>{
+public class RoupaDTO extends RepresentationModel<RoupaDTO> {
     private Long id;
     private String tipo;
     private String tamanho;
@@ -45,8 +45,7 @@ public class RoupaDTO extends RepresentationModel<RoupaDTO>{
         return preco;
     }
 
-    public double setPreco(double preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
-    }    
-
+    }
 }
