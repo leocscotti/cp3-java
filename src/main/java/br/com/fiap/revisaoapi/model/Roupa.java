@@ -37,7 +37,7 @@ public class Roupa {
     public Roupa() {
     }
 
-    public Roupa(Long id, String tipo, String tamanho, String cor, String marca, String preco) {
+    public Roupa(Long id, String tipo, String tamanho, String cor, String marca, double preco) {
         this.id = id;
         this.tipo = tipo;
         this.tamanho = tamanho;
